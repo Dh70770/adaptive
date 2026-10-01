@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kvíz z českého pravopisu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <!-- Hlavička s průběhem a skóre -->
+    <header class="quiz-header" id="quiz-header">
+      <div class="progress-info">
+        <span id="question-number">Otázka 1/10</span>
+        <span id="score-counter">Skóre: 0</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="progress-bar-fill"></div>
+      </div>
+    </header>
 
+    <!-- Karta otázky -->
+    <main class="quiz-card" id="quiz-card">
+      <div class="card-meta">
+        <span class="badge category-badge" id="category-badge">Pravopis</span>
+        <span class="badge difficulty-badge" id="difficulty-badge">Střední</span>
+      </div>
+
+      <h2 class="question-text" id="question-text">Načítání otázky...</h2>
+
+      <!-- Tlačítka 4 možností -->
+      <div class="options-grid" id="options-container"></div>
+
+      <!-- Edukativní vysvětlení -->
+      <div class="explanation-box hidden" id="explanation-box">
+        <p class="explanation-title" id="explanation-status"></p>
+        <p class="explanation-text" id="explanation-text"></p>
+      </div>
+
+      <!-- Akční patička -->
+      <div class="action-footer">
+        <button class="btn btn-next hidden" id="next-btn">Další otázka &rarr;</button>
+      </div>
+    </main>
+
+    <!-- Výsledková obrazovka -->
+    <section class="results-card hidden" id="results-card">
+      <div class="results-icon" id="results-icon">🏆</div>
+      <h2 class="results-title">Kvíz dokončen!</h2>
+      <div class="score-summary">
+        <div class="score-circle">
+          <span class="final-score" id="final-score">0 / 10</span>
+          <span class="final-percentage" id="final-percentage">0 %</span>
+        </div>
+      </div>
+      <p class="results-message" id="results-message"></p>
+      <button class="btn btn-primary" id="restart-btn">Spustit nový kvíz</button>
+    </section>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
